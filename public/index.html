@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			var total = 0;
+			function dodrugs() {
+				total = total + 1;
+				document.getElementById('display').innerHTML = total;
+			}
+		</script>
+		<style>
+			/* global defaults */
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font: 60pt Helvetica, Arial;
+				min-width: 100vw;
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				overflow-x: hidden;
+				overflow-y: auto;
+				background-color: #010101;
+				color: #fefefe;
+			}
+
+			.page {
+				flex: 1 1 auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			footer {
+				flex: 0 1 auto;
+				justify-self: flex-end;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			p {
+				font-size: 60px;
+				color: white;
+			}
+
+			button {
+				font-size: 60px;
+				background-color: white;
+				width: 50%;
+			}
+
+			footer p {
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="page">
+			<p>You have done <span id="display">0</span> drugs!</p>
+			<button onclick="dodrugs()">Do Drugs</button>
+		</div>
+		<footer>
+			<p>This protest was created by Kayne Ruse in frustration about the draconain media laws surrounding the classification of video games.</p>
+			<p>Some toff in Canberra thinks we're not capable of consuming interactive media if it depicts drug use. Well fuck you.</p>
+		</footer>
+	</body>
+</html>
